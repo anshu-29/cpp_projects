@@ -1,0 +1,189 @@
+Character Analysis- 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char a;
+    cout << "Enter the character: ";
+    cin >> a;
+
+    if (a >= '0' && a <= '9')
+    {
+        cout << "It is an integer" << endl;
+        if ((a - '0') % 2 == 0)
+            cout << "This char number is divisible by 2" << endl;
+        else
+            cout << "This char number is not divisible by 2" << endl;
+        if ((a - '0') % 5 == 0)
+            cout << "This number is divisible by 5" << endl;
+        else
+            cout << "This no is not divisible by 5" << endl;
+    }
+    else
+    {
+        cout << "It is an alphabet" << endl;
+        if (a >= 'a' && a <= 'z')
+        {
+            cout << "It is a lower-case alphabet" << endl;
+            if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u')
+                cout << "It is a vowel" << endl;
+            else
+                cout << "It is a consonant" << endl;
+        }
+        else if (a >= 'A' && a <= 'Z')
+        {
+            cout << "It is an upper-case alphabet" << endl;
+            if (a == 'A' || a == 'E' || a == 'I' || a == 'O' || a == 'U')
+                cout << "It is a vowel" << endl;
+            else
+                cout << "It is a consonant" << endl;
+        }
+    }
+
+    return 0;
+}
+
+Month Name - 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int monno;
+    cout << "Input Month No: ";
+    cin >> monno;
+
+    switch (monno)
+    {
+    case 1:
+        cout << "January" << endl;
+        break;
+    case 2:
+        cout << "February" << endl;
+        break;
+    case 3:
+        cout << "March" << endl;
+        break;
+    case 4:
+        cout << "April" << endl;
+        break;
+    case 5:
+        cout << "May" << endl;
+        break;
+    case 6:
+        cout << "June" << endl;
+        break;
+    case 7:
+        cout << "July" << endl;
+        break;
+    case 8:
+        cout << "August" << endl;
+        break;
+    case 9:
+        cout << "September" << endl;
+        break;
+    case 10:
+        cout << "October" << endl;
+        break;
+    case 11:
+        cout << "November" << endl;
+        break;
+    case 12:
+        cout << "December" << endl;
+        break;
+    default:
+        cout << "Invalid Month number. Please try again..." << endl;
+        break;
+    }
+
+    return 0;
+}
+
+Admission Eligibility - 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int p, c, m, t, mp;
+
+    cout << "Eligibility Criteria:" << endl;
+    cout << "Marks in Maths >= 65" << endl;
+    cout << "and Marks in Phy >= 55" << endl;
+    cout << "and Marks in Chem >= 60" << endl;
+    cout << "and Total in all three subjects >= 190" << endl;
+    cout << "or Total in Maths and Chem >= 130" << endl;
+    cout << "-------------------------------------" << endl;
+
+    cout << "Input the marks obtained in Physics: ";
+    cin >> p;
+    cout << "Input the marks obtained in Chemistry: ";
+    cin >> c;
+    cout << "Input the marks obtained in Mathematics: ";
+    cin >> m;
+    cout << "Total marks of Maths, Physics, and Chemistry: " << m + p + c << endl;
+    cout << "Total marks of Maths and Physics: " << m + p << endl;
+
+    if (m >= 65)
+        if (p >= 55)
+            if (c >= 60)
+                if ((m + p + c) >= 190 || (m + c) >= 130)
+                    cout << "The candidate is eligible for admission." << endl;
+                else
+                    cout << "The candidate is not eligible." << endl;
+            else
+                cout << "The candidate is not eligible." << endl;
+        else
+            cout << "The candidate is not eligible." << endl;
+    else
+        cout << "The candidate is not eligible." << endl;
+
+    return 0;
+}
+
+Grading System - 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int phy, chem, bio, math, comp;
+    float per;
+
+    cout << "Enter five subjects marks: ";
+    cin >> phy >> chem >> bio >> math >> comp;
+
+    per = (phy + chem + bio + math + comp) / 5.0;
+
+    cout << "Percentage = " << per << endl;
+
+    if (per >= 90)
+    {
+        cout << "Grade A";
+    }
+    else if (per >= 80)
+    {
+        cout << "Grade B";
+    }
+    else if (per >= 70)
+    {
+        cout << "Grade C";
+    }
+    else if (per >= 60)
+    {
+        cout << "Grade D";
+    }
+    else if (per >= 40)
+    {
+        cout << "Grade E";
+    }
+    else
+    {
+        cout << "Grade F";
+    }
+
+    return 0;
+}
+
+
